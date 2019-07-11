@@ -48,7 +48,7 @@ $user=Yii::$app->user->getIdentity();
 
                         ],
                     ],
-                    ['label'=>'Экспорт в EXCEL','icon'=>'fa-file-excel-o','url'=>['/excel/export']],
+                    ['label'=>'Экспорт в EXCEL','icon'=>'file-excel-o','url'=>['/excel/export']],
                 ],
             ]
         ) ?>
