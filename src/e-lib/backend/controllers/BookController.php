@@ -53,6 +53,13 @@ class BookController extends Controller
         ]);
     }
 
+    public function actionDetail($id){
+        $book=Book::find()->where(['id'=>$id])->with('author')->one();
+        return $this->render('detail',[
+            'book'=>$book
+        ]);
+    }
+
     public function actionDelete($id){
         $book=Book::find()->where(['id'=>$id])->one();
         if($book){

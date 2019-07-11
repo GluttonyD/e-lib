@@ -37,6 +37,7 @@ $this->title='Список книг';
                                         <td><?= $book->getCover() ?></td>
                                         <td><?= $book->author->name.' '.$book->author->surname ?></td>
                                         <td>
+                                            <a  href="/book/detail?id=<?= $book->id ?>" class="glyphicon glyphicon-eye-open book-edit" title="Просмотр информации"></a>
                                             <a  href="/book/edit?id=<?= $book->id ?>" class="glyphicon glyphicon-pencil book-edit" title="Редактировать"></a>
                                             <a id="<?= $book->id ?>" href="/book/delete" class="glyphicon glyphicon-erase book-delete" title="Удалить"></a>
                                         </td>
