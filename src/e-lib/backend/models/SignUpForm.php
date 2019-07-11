@@ -45,7 +45,7 @@ class SignUpForm extends Model
             $user=new User();
             $user->username=$this->username;
             $user->email=$this->email;
-            $user->password=Yii::$app->security->generatePasswordHash($this->password);
+            $user->password_hash=Yii::$app->security->generatePasswordHash($this->password);
             $user->password_reset_token=Yii::$app->security->generateRandomString();
             $user->created_at=time();
             $user->updated_at=time();
